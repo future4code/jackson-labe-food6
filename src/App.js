@@ -1,4 +1,5 @@
 import React from "react";
+
 import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes/Router';
 import { ThemeProvider } from '@material-ui/core/styles';
@@ -21,8 +22,9 @@ const App = () => {
 //       <ProgressPage/>
 //       {/* <ErrorPage /> */}
 //     </>
-// >>>>>>> master
-  );
+// // >>>>>>> master
+// // >>>>>>> master
+//   );
 };
 
 export default App;
