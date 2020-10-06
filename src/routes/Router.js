@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from 'react-router-dom';
 import LoginPage from '../screens/LoginPage/LoginForm';
 import ProgressPage from "../screens/ProgressPage/index";
-import FeedPage from "../screens/HomePage/index;";
+import HomePage from "../screens/HomePage/index";
 import ErrorPage from "../screens/Errors/index";
 import PerfilPage from "../screens/Perfil/index";
 import RestaurantPage from "../screens/RestaurantPage/index";
@@ -19,7 +19,7 @@ const Routes = () => {
         <ProgressPage/>
       </Route>
       <Route exact path={'/feed'}>
-        <FeedPage/>
+        <HomePage/>
       </Route>
       <Route exact path={'/error'}>
         <ErrorPage/>
