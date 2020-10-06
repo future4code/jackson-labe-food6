@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Route, Switch } from 'react-router-dom';
 import LoginPage from '../screens/LoginPage/LoginForm';
 import ProgressPage from "../screens/ProgressPage/index";
@@ -37,6 +38,7 @@ const Routes = () => {
         <CartPage/>
       </Route>
     </Switch>
+
   );
 };
 
