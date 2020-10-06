@@ -1,4 +1,5 @@
 
+
 export const PrimaryColor = "#000000" /* Preto 100% */
 export const SecondaryColor = "#5cb646" /* Verde Logo */
 export const ContainerBackgroundColor = "#ffffff" /* Fundo branco */
