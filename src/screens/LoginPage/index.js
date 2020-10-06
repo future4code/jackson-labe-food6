@@ -1,29 +1,20 @@
 import React from "react";
-import Button from '@material-ui/core/Button'
-import { ScreenContainer, SignUpButtonContainer } from './styled'
 import LoginForm from './LoginForm'
-import { useHistory } from 'react-router-dom'
-//import { goToSignUpPage } from '../../routes/'
+import {ButonContained,MainContainer} from "./styled";
 
 
 
-const LoginPage = () => {
-  //const history = useHistory()
- 
+const LoginPage = () => { 
   return (
-    <ScreenContainer>
+  <div>
     <LoginForm />
-    <SignUpButtonContainer>
-      <Button
-        //onClick={() =>goToSignUpPage(history)}
-        type={'submit'}
-        fullWidth
-      >
-        Não possui cadastro?Clique aqui.
-      </Button>
-    </SignUpButtonContainer>
-  </ScreenContainer>
+    <MainContainer>
+      <ButonContained>
+        Não possui cadastro? Clique aqui.
+      </ButonContained>
+    </MainContainer>
+   </div>
   );
 };
-
 export default LoginPage;
+
