@@ -27,7 +27,7 @@ const Routes = () => {
       <Route exact path={'/perfil'}>
         <PerfilPage/>
       </Route>
-      <Route exact path={'/resteurante'}>
+      <Route exact path={'/restaurante'}>
         <RestaurantPage/>
       </Route>
       <Route exact path={'/cadastro'}>
