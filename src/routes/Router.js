@@ -1,10 +1,17 @@
 import React from "react";
-
+import { Route, Switch } from 'react-router-dom';
+import LoginPage from '../screens/LoginPage';
+import ProgressPage from "../screens/ProgressPage";
 const Routes = () => {
   return (
-    <>
-      <h1>Routes</h1>
-    </>
+    <Switch>
+    <Route exact path={'/login'}>
+      <LoginPage/>
+    </Route>
+    <Route exact path={'/'}>
+      <ProgressPage/>
+    </Route>
+    </Switch>
   );
 };
 
