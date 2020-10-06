@@ -1,10 +1,10 @@
 import React from "react";
-import ProgressPage from "./screens/ProgressPage";
+import SignUpPage from "./screens/SignUpPage";
 
 const App = () => {
   return (
     <>
-      <ProgressPage/>
+      <SignUpPage />
     </>
   );
 };
