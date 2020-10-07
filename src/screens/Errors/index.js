@@ -1,7 +1,7 @@
 import React from "react";
-import { BackButton, ErrorContainer, ErrorMessage, HeaderContainer, HeaderTitle, SearchContainer, SearchIcon, SearchInput } from "./styled";
-import Search from "../../assets/img/search.svg"
+import { BackButton, ErrorContainer, ErrorMessage, HeaderContainer, HeaderTitle } from "./styled";
 import back from "../../assets/img/back.svg"
+import SearchBar from "../../components/inputs/SearchBar"
 
 const ErrorPage = () => {
   return (
@@ -12,10 +12,11 @@ const ErrorPage = () => {
       </HeaderContainer>
 
       <ErrorContainer>
-        <SearchContainer>
+        {/* <SearchContainer>
           <SearchIcon src={Search}/>
           <SearchInput />
-        </SearchContainer>
+        </SearchContainer> */}
+        <SearchBar />
 
         <ErrorMessage>Não encontramos :(</ErrorMessage>
 
