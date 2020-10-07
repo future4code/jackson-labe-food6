@@ -18,8 +18,6 @@ import invertLogo from "../../assets/img/logo-future-eats-invert.png";
 import { InputAdornment, TextField } from "@material-ui/core";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
 
-import "fontsource-roboto";
-
 const SignUpPage = () => {
   return (
     <>
