@@ -4,6 +4,7 @@ import Cart from "../screens/Cart";
 import ErrorPage from "../screens/Errors";
 import HomePage from "../screens/HomePage";
 import LoginPage from "../screens/LoginPage";
+import NotFoundPage from "../screens/NotFoundPage";
 import PerfilPage from "../screens/Perfil";
 import ProgressPage from "../screens/ProgressPage";
 import RestaurantPage from "../screens/RestaurantPage";
@@ -36,6 +37,9 @@ const Routes = () => {
       <Route exact path={"/carrinho"}>
         <Cart />
       </Route>
+      <Route>
+        <NotFoundPage />
+       </Route>
     </Switch>
   );
 };
