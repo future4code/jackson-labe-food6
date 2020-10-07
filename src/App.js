@@ -7,8 +7,6 @@ const App = () => {
   return (
 
     <>
-      <SignUpPage />
-
       <BrowserRouter>
           <Routes/>
       </BrowserRouter>
