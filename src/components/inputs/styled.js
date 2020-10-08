@@ -16,8 +16,9 @@ export const Input = styled.input`
     grid-column: 2/3;
     grid-row: 1/2;
     border: none;
+    outline: ${SecondaryColor};
     font-size: 16px;
-    padding: 19px 18px 19px 0px;
+    padding: 19px 18px 19px 16px;
 `
 export const SearchButton = styled.button`
     background-color: transparent;
@@ -46,7 +47,8 @@ export const InputContainer = styled.input`
     height: 56px;
     border-radius: 2px;
     border: solid 1px ${MainInputColor};
-    margin-top: 50px;
+    margin-bottom: 8px;
+    outline: none;
     position: relative;
 `
 // Input with Label
@@ -58,7 +60,7 @@ export const InputWithLabelContainer = styled.div`
     height: 56px;
     border-radius: 2px;
     border: solid 1px ${MainInputColor};
-    margin-top: 50px;
+    margin-bottom: 8px;
     position: relative;
 `
 export const InputLabel = styled.div`
@@ -76,8 +78,9 @@ export const InputText = styled.input`
     grid-column: 1/2;
     grid-row: 1/2;
     border: none;
+    outline: none;
     font-size: 16px;
-    padding: 19px 18px 19px 0px;
+    padding: 19px 18px 19px 16px;
 `
 
 // Input Password
@@ -90,13 +93,16 @@ export const PasswordFormContainer = styled.form`
     height: 56px;
     border-radius: 2px;
     border: solid 1px ${MainInputColor};
+    margin-bottom: 8px;
+    position: relative;
 `
 export const InputPass = styled.input`
     grid-column: 1/2;
     grid-row: 1/2;
     border: none;
+    outline: none;
     font-size: 16px;
-    padding: 19px 18px 19px 0px;
+    padding: 19px 18px 19px 16px;
 `
 export const PasswordIconImg = styled.img`
     width: 24px;
