@@ -55,11 +55,9 @@ const LoginForm = () => {
             <PasswordIconImg src={Visible}/>
         </PasswordFormContainer>
       
-      <MainButton
-      //  onSubmit={onClickLogin}
-      //  type={"submit"}
-       >
-        Entrar
+
+      <MainButton>
+          Entrar
       </MainButton>
   </InputsContainer>
 </form>
