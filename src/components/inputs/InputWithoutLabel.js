@@ -1,5 +1,5 @@
 import React from "react";
-import { InputContainer, Input } from "./styled";
+import { InputContainer } from "./styled";
 
 const InputWithoutLabel = ()=>{
     return(
