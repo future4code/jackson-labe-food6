@@ -1,14 +1,12 @@
-import { useHistory } from 'react-router-dom'
-import { useEffect } from 'react'
-import { goToFeed} from '../routes/Coordinator'
-import { login } from '../services/apiRequests'
-import { useHistory } from 'react-router-dom'
+import { useLayoutEffect } from 'react';
+import { goToFeed} from '../routes/Coordinator';
+import { useHistory } from 'react-router-dom';
 
 const useProtectPage = () => {
   const history = useHistory()
-  useEffect(() => {
+  useLayoutEffect(() => {
     const token = localStorage.getItem('token')
-    if (!token ){
+    if (token){
       goToFeed(history)
     }
   }, [history])
