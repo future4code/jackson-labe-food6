@@ -1,52 +1,65 @@
-import React from 'react';
-import logo from "../../assets/img/logo-future-eats-invert1.png";
-import Senha from "../../assets/img/senha.png";
-import {Imagem, Text ,InputsContainer,Input,Input1,Botao,EyesContainer,EyeIcon} from "./styled";
+import React, { useState } from 'react';
+import {InputsContainer, LogoImg, PageText, PageTextContainer } from "./styled";
+import { InputWithLabelContainer, InputLabel, InputText, PasswordFormContainer, PasswordIconImg, InputPass } from "../../components/inputs/styled"
 import { login } from '../../services/apiRequests';
 import { useHistory } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
+import LogoFutureEats from "../../assets/img/logo-future-eats-invert.png";
+import { MainButton } from '../../components/mainButtonStyle';
+import Visible from "../../assets/icons/senha-2.png";
+import Invisible from "../../assets/icons/senha.png";
 
 const LoginForm = () => {
   const [form, handleInputChange] = useForm({ email: '', password: ''})
   const history = useHistory()
 
- const onClickLogin = (event) => {
+  const onClickLogin = (event) => {
     event.preventDefault()
       login(form, history)
     }
+
+  // const onClickPassword = (event) =>{
+    
+  // }
   
   return (
     <form >  
-    <Imagem src={logo} alt="logo future eats" />
-      <Text>Entrar</Text>
+      <LogoImg src={LogoFutureEats} alt="FUTURE EATS" />
+      <PageTextContainer>
+      <PageText>Entrar</PageText>
+      </PageTextContainer>
       <InputsContainer>
-     <Input1
-        name='email'
-        value={form.email}
-        placeholder= 'email@email.com'
-        onChange={handleInputChange}
-        label='E-mail'
-        type={'email'}
-        required
-        autoFocus
-      />
-      <EyesContainer> 
-        <Input
-          name='password'
-          value={form.password}
-          placeholder= 'Mínimo 6 caracteres'
-          onChange={handleInputChange}
-          type={'password'}
-          require
-        />
-        <EyeIcon src={Senha}/>
-      </EyesContainer>
-      <Botao
-       onClick={onClickLogin}
-       type={'submit'}
+        <InputWithLabelContainer>
+            <InputLabel>E-mail *</InputLabel>
+            <InputText 
+            name='email'
+            value={form.email}
+            placeholder= 'email@email.com'
+            onChange={handleInputChange}
+            label='E-mail'
+            type={'email'}
+            required
+            autoFocus
+            />
+        </InputWithLabelContainer>
+        <PasswordFormContainer>
+            <InputLabel>Senha *</InputLabel>
+            <InputPass 
+            name='password'
+            value={form.password}
+            placeholder= 'Mínimo 6 caracteres'
+            onChange={handleInputChange}
+            type={"password"}
+            require
+            />
+            <PasswordIconImg src={Visible}/>
+        </PasswordFormContainer>
+      
+      <MainButton
+       onSubmit={onClickLogin}
        >
         Entrar
-      </Botao>
+      </MainButton>
   </InputsContainer>
 </form>
   )
