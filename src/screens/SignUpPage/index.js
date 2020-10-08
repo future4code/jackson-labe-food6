@@ -1,4 +1,7 @@
 import React from "react";
+import {signup  } from '../../services/apiRequests';
+import { useHistory } from 'react-router-dom';
+import useForm from '../../hooks/useForm';
 import {
   MainContainer,
   Header,
@@ -19,8 +22,16 @@ import { InputAdornment, TextField } from "@material-ui/core";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
 
 const SignUpPage = () => {
+  const [form, handleInputChange] = useForm({name:'', email: '', cpf:'', password: ''})
+  const history = useHistory()
+
+ const onClickSignUp= (event) => {
+    event.preventDefault()
+    signup (form, history)
+    }
+
   return (
-    <>
+    <form>
       <MainContainer>
         <Header>
           <IconBox src={backArrow} alt="icone de voltar para página anterior" />
@@ -34,6 +45,9 @@ const SignUpPage = () => {
         <Form>
           <TextField
             variant="outlined"
+            value={form.name}
+            onChange={handleInputChange}
+            name={'name'}
             required="true"
             label="Nome"
             placeholder="Nome e Sobrenome"
@@ -41,6 +55,10 @@ const SignUpPage = () => {
           />
           <TextField
             variant="outlined"
+            value={form.email}
+            type={'email'}
+            onChange={handleInputChange}
+            name={'email'}
             required="true"
             label="E-mail"
             placeholder="email@email.com"
@@ -49,6 +67,10 @@ const SignUpPage = () => {
 
           <TextField
             variant="outlined"
+            value={form.cpf}
+            onChange={handleInputChange}
+            name={'cpf'}
+            type={'cpf'}
             required="true"
             label="CPF"
             placeholder="000.000.000-00"
@@ -57,6 +79,10 @@ const SignUpPage = () => {
 
           <TextField
             variant="outlined"
+            value={form.password}
+            name={'password'}
+            onChange={handleInputChange}
+            type={'password'}
             required="true"
             label="Senha"
             placeholder="Mínimo 6 caracteres"
@@ -72,6 +98,10 @@ const SignUpPage = () => {
 
           <TextField
             variant="outlined"
+            value={form.password}
+            onChange={handleInputChange}
+            name={'password'}
+            type={'password'}
             required="true"
             label="Confirmar"
             placeholder="Confirme a senha anterior"
@@ -85,11 +115,16 @@ const SignUpPage = () => {
             }}
           />
           <BoxButton>
-            <Button>Criar</Button>
+            <Button
+              onClick={onClickSignUp}
+              type={'submit'}
+            >
+              Criar
+              </Button>
           </BoxButton>
         </Form>
       </MainContainer>
-    </>
+    </form>
   );
 };
 
