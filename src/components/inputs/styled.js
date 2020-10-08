@@ -46,6 +46,38 @@ export const InputContainer = styled.input`
     height: 56px;
     border-radius: 2px;
     border: solid 1px ${MainInputColor};
+    margin-top: 50px;
+    position: relative;
+`
+// Input with Label
+export const InputWithLabelContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 90vw;
+    height: 56px;
+    border-radius: 2px;
+    border: solid 1px ${MainInputColor};
+    margin-top: 50px;
+    position: relative;
+`
+export const InputLabel = styled.div`
+    position: absolute;
+    top: -8px;
+    border: none;
+    width: 78px;
+    left: 12px;
+    font-size: 12px;
+    color: ${MainInputColor};
+    background-color: white;
+    padding-left: 4px;
+`
+export const InputText = styled.input`
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: none;
+    font-size: 16px;
+    padding: 19px 18px 19px 0px;
 `
 
 // Input Password
