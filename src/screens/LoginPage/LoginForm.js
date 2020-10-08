@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {InputsContainer, LogoImg, PageText, PageTextContainer } from "./styled";
 import { InputWithLabelContainer, InputLabel, InputText, PasswordFormContainer, PasswordIconImg, InputPass } from "../../components/inputs/styled"
 import { login } from '../../services/apiRequests';
@@ -23,7 +23,7 @@ const LoginForm = () => {
   // }
   
   return (
-    <form >  
+    <form   onSubmit={onClickLogin}>  
       <LogoImg src={LogoFutureEats} alt="FUTURE EATS" />
       <PageTextContainer>
       <PageText>Entrar</PageText>
@@ -55,9 +55,7 @@ const LoginForm = () => {
             <PasswordIconImg src={Visible}/>
         </PasswordFormContainer>
       
-      <MainButton
-       onSubmit={onClickLogin}
-       >
+      <MainButton>
         Entrar
       </MainButton>
   </InputsContainer>
