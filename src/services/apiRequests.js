@@ -1,6 +1,6 @@
  import axios from "axios";
  import {Base_Url}  from '../constants/urls';
- import {goToFeed} from '../routes/Coordinator';
+ import {goToFeed, goToPerfil} from '../routes/Coordinator';
 
 
 export const login = (body, history) => {
@@ -19,7 +19,7 @@ export const login = (body, history) => {
     axios.post(`${Base_Url}/futureEatsA/signup`, body)
       .then((response) => {
         console.log(response)
-        goToFeed(history)
+        goToPerfil(history)
         })
       .catch((error) => {
         console.log(error)

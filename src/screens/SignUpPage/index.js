@@ -31,7 +31,7 @@ const SignUpPage = () => {
     }
 
   return (
-    <form>
+    <form  onSubmit={onClickSignUp}>
       <MainContainer>
         <Header>
           <IconBox src={backArrow} alt="icone de voltar para página anterior" />
@@ -115,10 +115,7 @@ const SignUpPage = () => {
             }}
           />
           <BoxButton>
-            <Button
-              onClick={onClickSignUp}
-              type={'submit'}
-            >
+            <Button>
               Criar
               </Button>
           </BoxButton>

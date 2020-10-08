@@ -55,8 +55,9 @@ const LoginForm = () => {
             <PasswordIconImg src={Visible}/>
         </PasswordFormContainer>
       
+
       <MainButton>
-        Entrar
+          Entrar
       </MainButton>
   </InputsContainer>
 </form>
