@@ -83,7 +83,6 @@ const AddButton = styled.div`
 font-size: 12px;
 border: 1px solid black;
 border-radius: 10px;
-
 `
 
 
@@ -116,9 +115,7 @@ const RestaurantPage = () => {
             <AddButton>Adicionar</AddButton>
           </ContainerPrice>
         </TextMenu>
-        
       </Menu>
-  
     </MainContainer>
   );
 };
