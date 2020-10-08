@@ -4,29 +4,20 @@ import LoginForm from './LoginForm';
 import { useHistory } from "react-router-dom";
 import { PageTextContainer } from "./styled";
 import { TextButton } from "../../components/textButtonStyle";
-// import useProtectPage from "../../hooks/useProtectPage";
+
 
 
 const LoginPage = () => { 
-  const history = useHistory()
+  const history = useHistory()  
 
-  useEffect(()=>{
-    const token = window.localStorage.getItem("token");
-
-    if (token) {
-      goToFeed(history)
-    } 
-  });
-
-  // useProtectPage()
   return (
-  <>
+  <form onSubmit={() =>goToSignUp(history)}>
     <LoginForm />
     <PageTextContainer>
-      <TextButton onSubmit={() =>goToSignUp(history)}>Não possui cadastro? Clique aqui.</TextButton>
+      <TextButton >Não possui cadastro? Clique aqui.</TextButton>
     </PageTextContainer>
 
-   </>
+   </form>
   );
 };
 export default LoginPage;
